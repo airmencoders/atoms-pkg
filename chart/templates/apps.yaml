@@ -95,8 +95,8 @@ type: Opaque
 
 
 data:
-  tls.key: {{ $secret.data.tls.key }}
-  tls.crt: {{ $secret.data.tls.crt }}
+  tls.key: {{ $secret.data.tlskey }}
+  tls.crt: {{ $secret.data.tlscrt }}
 
 
 
