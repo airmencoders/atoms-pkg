@@ -91,6 +91,8 @@ metadata:
     namespace: argocd
 type: Opaque
 data: |
-    {{ toYaml $secret.data | indent 4 }}
+    {{- range $key, $value := {{ toYaml $secret.data | indent 4 }} }}
+    {{ $key }} = {{ tpl $value $ }}
+    {{- end }}
 {{ end }}
 {{ end }}
