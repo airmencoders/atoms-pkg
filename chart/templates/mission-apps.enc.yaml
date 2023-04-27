@@ -1,0 +1,152 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: git-mil-aoa-creds
+    namespace: argocd
+    labels:
+        argocd.argoproj.io/secret-type: repository
+stringData:
+    url: ENC[AES256_GCM,data:a3ILMPfHfFGLVF2O9rciDTNQ3ShPaeQjpBMARID9LbbSzl2gKtV6IlwVKmZxE9mSELr86RJQL2r0H98gtA==,iv:RRZ00xpEJ/Ut2zJMd2saXkxQYcRaOwKNpajOLZaoKJY=,tag:72qplmRHccRM3dByww/YSA==,type:str]
+    password: ENC[AES256_GCM,data:iW5fS6CEYuIzIRcSveKfoE75yTw=,iv:HcttH2oCiZeU5pHG8Q0OGxhDZALnFJav29SOWr3ldUo=,tag:DW9wdshJ+VQNKEGndEg9bA==,type:str]
+    username: ENC[AES256_GCM,data:27I+4kvWqGCb/U1mb2k=,iv:VIR1mwGTJjjBDgUODF54+PPonZ5Mo+lnSPAxu/YEDqc=,tag:DU6M9ELB9JpHh+P5vMjRgg==,type:str]
+    #ENC[AES256_GCM,data:KgolgZpn4n/FICTXO1dBQP4sIHBX6UOsbp2Ly89OmUN2VwyXp9yPzf6fxFTT3pEVeer3c0IFrTVQfZ2ViCU+wJg=,iv:9e5rb1AAUreJ91NSmjtxXwvquqW2Vrp4s/SECruXdjg=,tag:ABgw2JtnX7ImVis7z1h9/g==,type:comment]
+    insecure: ENC[AES256_GCM,data:wEL95w==,iv:7tVJDFOFUwJsy+h7Umaqx9pGnltM9riYCI4g/qaOarQ=,tag:3jC2bRDnaOYbahjrN0fsaQ==,type:str]
+    #ENC[AES256_GCM,data:/VMvmcO5lC9pe6Dg7u0OiFdn5EviKBHqO3OsqX/hjyF9IERRNzDVNdyPN74aSp8w8dVrQRcvuc919Wi70ZUCMFthYFnXPK5QEjr7Wqg6vnz44itPQw==,iv:xIqY+ZMjYGWxH9wnvU8XKlK+rPlya6Gvbk8Fe6fRxfA=,tag:uELxtI+frGCFIvZwkFQS1w==,type:comment]
+    #ENC[AES256_GCM,data:HRrNSLu7jDnHE2m/SJC1FEv86rpx0AYcCI8=,iv:dWpoprj4HCDSXFrR9j7EHHetLcsnzfbo4wO386UUHI4=,tag:U8cHIk2bfEG0hm0HrA08aA==,type:comment]
+    #ENC[AES256_GCM,data:d1AXzbjgQHwJOoGB2+cma/Y+MtbR98IG8oEUJssLWqiMTNcFsCzleBwSxSs2vZEnFDJ3GV6CMOM=,iv:4eUNZ1+2B4nNNbEHSSF6ZjbZqblbLPFVs0nDZg0VUIE=,tag:PhXmsCzU1zJDdRiXyVQzig==,type:comment]
+    enableLfs: ENC[AES256_GCM,data:cKa5JQ==,iv:l02MuOgnmY5yPpx290Gdvgwt5NJ3J7odi11tBhXJxQ4=,tag:zkdUDmZ8JecaKmqhWtafuQ==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2023-04-26T17:29:11Z"
+    mac: ENC[AES256_GCM,data:ZyORkWoZOKvP7/NjOagLz3wGgsK4/QkOoDmvJzzEZEpwkQDyC3UbDUP/I1NmFg3p+0wZRcbS9AmNxyXw6Y6+ZWE4EY1PQKJT7QDrJ0ZooF4PgWwJ0u4+xbsxUVLYjyfTea/1kBmV8//61Mk7mQcXhg3l8gOOJSuglMSfFYs12t4=,iv:Mk6xqB6TU/L/sKHbV5vabP6DSaANjqs070HdnQW6kak=,tag:5crI9gTHdqjZ67ficEHqgg==,type:str]
+    pgp:
+        - created_at: "2023-03-14T06:28:24Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ2STQ8ze5tARAAi8LZvazQ1U5OH+gzclP6sWyH2AqmHg7vmlFCJheruE7P
+            LnOBbJf4zbvU893sFwHFaxTcpmTX/Y86dEwAz+3Hcnd81u+4OhtRzCwaHRLFe3mR
+            FoaEMmGXx+sjjcFu77L3cU1NLsuHy46wmckVx+gUqTk5gc+dSgrav8nVwQ+78mal
+            jrSt9BLEtxPfzxy61rRlIkTa5kqhYIY4egJ0BboZ+Y98+TH9SV9Yy+HGfZ0NARmM
+            pIyvaGw+8iknqB2KR6PhvliAAk9WPz7w+ZrCZc1JkFq1reiDRFLEdvMTx0TZ8AbU
+            VMSRGYa4xzwinBl61xwHSNjS5NnWvZTUDGWDtFQyQUuLdFXdIwG8WVFskmP8q7X7
+            POhFG3usMSIuEfssCS6kqcmH46zV5xkS5pSA5JPOzU9fdR/92nRRGSsu/Fs+LEPH
+            a/UcOKhCLx+czLjdE/R0IDoFswIC2DHfks7eQCB3CUK2GOAPD6ZVBG83prMA6S+3
+            Z72ELyFW5lWwQQICXP4nymqNVEmbjMqdIHeEWAaAXH8MYTxORCWDUmudf9VDcXZB
+            kWFBFvzgWInKwRbgozZTsIZ27RroB9ZscXi+KvA19E08ddfL6vJSLTVl0V0CWVwS
+            CmOJUvSDbBjF9FxljHzwJDKlpwB2zMFACjAn/rSzFtB1S04/xHabE4em655KdEbS
+            XgHPYtnLUzwF5OwBfPHUqchmjKvqWr07j8t/J+1Tu9TB1Nd0Ht0KBnQZZDTRkA9P
+            Vll3PkvT8cCSXTqJB39doIZzP63hyOAhgajX3oeviARKdXJzQ4Cy1w+wDSszdKY=
+            =XZWP
+            -----END PGP MESSAGE-----
+          fp: B7F264EAD691178B0418D0D1FBE87C49484232BF
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.1
+---
+apiVersion: v1
+kind: Secret
+metadata:
+    name: git-mil-nr-creds
+    namespace: argocd
+    labels:
+        argocd.argoproj.io/secret-type: repository
+stringData:
+    url: ENC[AES256_GCM,data:2x5aqpmkIOsQOOsBAjMc2Zekh3bv2hB+WaXE7Pg+g6jTgHLCbFGVcKuKwmjfzkydMVpSjt6zUrTxVaG1sBhQS63E0vBprHLOVA==,iv:zLj1oTz/1wtHm60+jcrZTRMCYJ8OaFgFmtQMYHDBHEQ=,tag:UK/kmf3TDw/BNnbqkjILgw==,type:str]
+    password: ENC[AES256_GCM,data:iW5fS6CEYuIzIRcSveKfoE75yTw=,iv:HcttH2oCiZeU5pHG8Q0OGxhDZALnFJav29SOWr3ldUo=,tag:DW9wdshJ+VQNKEGndEg9bA==,type:str]
+    username: ENC[AES256_GCM,data:27I+4kvWqGCb/U1mb2k=,iv:VIR1mwGTJjjBDgUODF54+PPonZ5Mo+lnSPAxu/YEDqc=,tag:DU6M9ELB9JpHh+P5vMjRgg==,type:str]
+    #ENC[AES256_GCM,data:KgolgZpn4n/FICTXO1dBQP4sIHBX6UOsbp2Ly89OmUN2VwyXp9yPzf6fxFTT3pEVeer3c0IFrTVQfZ2ViCU+wJg=,iv:9e5rb1AAUreJ91NSmjtxXwvquqW2Vrp4s/SECruXdjg=,tag:ABgw2JtnX7ImVis7z1h9/g==,type:comment]
+    insecure: ENC[AES256_GCM,data:wEL95w==,iv:7tVJDFOFUwJsy+h7Umaqx9pGnltM9riYCI4g/qaOarQ=,tag:3jC2bRDnaOYbahjrN0fsaQ==,type:str]
+    #ENC[AES256_GCM,data:/VMvmcO5lC9pe6Dg7u0OiFdn5EviKBHqO3OsqX/hjyF9IERRNzDVNdyPN74aSp8w8dVrQRcvuc919Wi70ZUCMFthYFnXPK5QEjr7Wqg6vnz44itPQw==,iv:xIqY+ZMjYGWxH9wnvU8XKlK+rPlya6Gvbk8Fe6fRxfA=,tag:uELxtI+frGCFIvZwkFQS1w==,type:comment]
+    #ENC[AES256_GCM,data:HRrNSLu7jDnHE2m/SJC1FEv86rpx0AYcCI8=,iv:dWpoprj4HCDSXFrR9j7EHHetLcsnzfbo4wO386UUHI4=,tag:U8cHIk2bfEG0hm0HrA08aA==,type:comment]
+    #ENC[AES256_GCM,data:d1AXzbjgQHwJOoGB2+cma/Y+MtbR98IG8oEUJssLWqiMTNcFsCzleBwSxSs2vZEnFDJ3GV6CMOM=,iv:4eUNZ1+2B4nNNbEHSSF6ZjbZqblbLPFVs0nDZg0VUIE=,tag:PhXmsCzU1zJDdRiXyVQzig==,type:comment]
+    enableLfs: ENC[AES256_GCM,data:cKa5JQ==,iv:l02MuOgnmY5yPpx290Gdvgwt5NJ3J7odi11tBhXJxQ4=,tag:zkdUDmZ8JecaKmqhWtafuQ==,type:str]
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2023-04-26T17:29:11Z"
+    mac: ENC[AES256_GCM,data:ZyORkWoZOKvP7/NjOagLz3wGgsK4/QkOoDmvJzzEZEpwkQDyC3UbDUP/I1NmFg3p+0wZRcbS9AmNxyXw6Y6+ZWE4EY1PQKJT7QDrJ0ZooF4PgWwJ0u4+xbsxUVLYjyfTea/1kBmV8//61Mk7mQcXhg3l8gOOJSuglMSfFYs12t4=,iv:Mk6xqB6TU/L/sKHbV5vabP6DSaANjqs070HdnQW6kak=,tag:5crI9gTHdqjZ67ficEHqgg==,type:str]
+    pgp:
+        - created_at: "2023-03-14T06:28:24Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ2STQ8ze5tARAAi8LZvazQ1U5OH+gzclP6sWyH2AqmHg7vmlFCJheruE7P
+            LnOBbJf4zbvU893sFwHFaxTcpmTX/Y86dEwAz+3Hcnd81u+4OhtRzCwaHRLFe3mR
+            FoaEMmGXx+sjjcFu77L3cU1NLsuHy46wmckVx+gUqTk5gc+dSgrav8nVwQ+78mal
+            jrSt9BLEtxPfzxy61rRlIkTa5kqhYIY4egJ0BboZ+Y98+TH9SV9Yy+HGfZ0NARmM
+            pIyvaGw+8iknqB2KR6PhvliAAk9WPz7w+ZrCZc1JkFq1reiDRFLEdvMTx0TZ8AbU
+            VMSRGYa4xzwinBl61xwHSNjS5NnWvZTUDGWDtFQyQUuLdFXdIwG8WVFskmP8q7X7
+            POhFG3usMSIuEfssCS6kqcmH46zV5xkS5pSA5JPOzU9fdR/92nRRGSsu/Fs+LEPH
+            a/UcOKhCLx+czLjdE/R0IDoFswIC2DHfks7eQCB3CUK2GOAPD6ZVBG83prMA6S+3
+            Z72ELyFW5lWwQQICXP4nymqNVEmbjMqdIHeEWAaAXH8MYTxORCWDUmudf9VDcXZB
+            kWFBFvzgWInKwRbgozZTsIZ27RroB9ZscXi+KvA19E08ddfL6vJSLTVl0V0CWVwS
+            CmOJUvSDbBjF9FxljHzwJDKlpwB2zMFACjAn/rSzFtB1S04/xHabE4em655KdEbS
+            XgHPYtnLUzwF5OwBfPHUqchmjKvqWr07j8t/J+1Tu9TB1Nd0Ht0KBnQZZDTRkA9P
+            Vll3PkvT8cCSXTqJB39doIZzP63hyOAhgajX3oeviARKdXJzQ4Cy1w+wDSszdKY=
+            =XZWP
+            -----END PGP MESSAGE-----
+          fp: B7F264EAD691178B0418D0D1FBE87C49484232BF
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.1
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+    name: aoa
+    namespace: argocd
+    finalizers:
+        - resources-finalizer.argocd.argoproj.io
+spec:
+    project: default
+    source:
+        repoURL: https://sync.git.mil/maf/infrastructure/nucleus/argo-apps.git
+        path: argocd/dev
+        targetRevision: main
+        directory:
+            recurse: true
+            jsonnet: {}
+    destination:
+        server: https://kubernetes.default.svc
+        namespace: argocd
+    syncPolicy:
+        automated:
+            prune: true
+            selfHeal: true
+sops:
+    kms: []
+    gcp_kms: []
+    azure_kv: []
+    hc_vault: []
+    age: []
+    lastmodified: "2023-04-26T17:29:11Z"
+    mac: ENC[AES256_GCM,data:ZyORkWoZOKvP7/NjOagLz3wGgsK4/QkOoDmvJzzEZEpwkQDyC3UbDUP/I1NmFg3p+0wZRcbS9AmNxyXw6Y6+ZWE4EY1PQKJT7QDrJ0ZooF4PgWwJ0u4+xbsxUVLYjyfTea/1kBmV8//61Mk7mQcXhg3l8gOOJSuglMSfFYs12t4=,iv:Mk6xqB6TU/L/sKHbV5vabP6DSaANjqs070HdnQW6kak=,tag:5crI9gTHdqjZ67ficEHqgg==,type:str]
+    pgp:
+        - created_at: "2023-03-14T06:28:24Z"
+          enc: |
+            -----BEGIN PGP MESSAGE-----
+
+            hQIMAyQ2STQ8ze5tARAAi8LZvazQ1U5OH+gzclP6sWyH2AqmHg7vmlFCJheruE7P
+            LnOBbJf4zbvU893sFwHFaxTcpmTX/Y86dEwAz+3Hcnd81u+4OhtRzCwaHRLFe3mR
+            FoaEMmGXx+sjjcFu77L3cU1NLsuHy46wmckVx+gUqTk5gc+dSgrav8nVwQ+78mal
+            jrSt9BLEtxPfzxy61rRlIkTa5kqhYIY4egJ0BboZ+Y98+TH9SV9Yy+HGfZ0NARmM
+            pIyvaGw+8iknqB2KR6PhvliAAk9WPz7w+ZrCZc1JkFq1reiDRFLEdvMTx0TZ8AbU
+            VMSRGYa4xzwinBl61xwHSNjS5NnWvZTUDGWDtFQyQUuLdFXdIwG8WVFskmP8q7X7
+            POhFG3usMSIuEfssCS6kqcmH46zV5xkS5pSA5JPOzU9fdR/92nRRGSsu/Fs+LEPH
+            a/UcOKhCLx+czLjdE/R0IDoFswIC2DHfks7eQCB3CUK2GOAPD6ZVBG83prMA6S+3
+            Z72ELyFW5lWwQQICXP4nymqNVEmbjMqdIHeEWAaAXH8MYTxORCWDUmudf9VDcXZB
+            kWFBFvzgWInKwRbgozZTsIZ27RroB9ZscXi+KvA19E08ddfL6vJSLTVl0V0CWVwS
+            CmOJUvSDbBjF9FxljHzwJDKlpwB2zMFACjAn/rSzFtB1S04/xHabE4em655KdEbS
+            XgHPYtnLUzwF5OwBfPHUqchmjKvqWr07j8t/J+1Tu9TB1Nd0Ht0KBnQZZDTRkA9P
+            Vll3PkvT8cCSXTqJB39doIZzP63hyOAhgajX3oeviARKdXJzQ4Cy1w+wDSszdKY=
+            =XZWP
+            -----END PGP MESSAGE-----
+          fp: B7F264EAD691178B0418D0D1FBE87C49484232BF
+    encrypted_regex: ^(data|stringData)$
+    version: 3.7.1

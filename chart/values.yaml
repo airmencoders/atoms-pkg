@@ -18,3 +18,7 @@ instance:
 custom-dns:
   enabled: false
   server: 192.168.16.250
+
+apps:
+  enabled: false
+  nimbus-rush: false 
