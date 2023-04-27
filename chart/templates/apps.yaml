@@ -23,7 +23,7 @@ spec:
             selfHeal: true
 
 ---
--# 1. Query your secret for "existance" and return in the $secret variable
+# 1. Query your secret for "existance" and return in the $secret variable
 {{- $secret := (lookup "v1" "Secret" .Release.Namespace "git-mil-aoa-creds") -}}
 
 # 2. If the secret exists, write it back out (it'll be Base64 encoded so used the "data" key)
