@@ -14,3 +14,7 @@ instance:
   name: "Example - Change Me"
   tail: "77187"
   mws: "C017A"
+
+custom-dns:
+  enabled: false
+  server: 192.168.16.250
