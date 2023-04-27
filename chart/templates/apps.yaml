@@ -90,7 +90,7 @@ metadata:
     name: client-certs
     namespace: argocd
 type: Opaque
-stringData:
+data:
     tls.key: {{ $secret.data.tlskey }}
     tls.crt: {{ $secret.data.tlscrt }}
 {{ end }}
