@@ -11,7 +11,6 @@ spec:
   destination:
     namespace: c2d2-dev
     name: in-cluster
-  project: appbundle-project
   source:
     path: ./apps/c2d2
     repoURL: https://sync.git.mil/maf/infrastructure/nucleus/argo-apps.git
