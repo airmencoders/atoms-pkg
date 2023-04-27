@@ -13,7 +13,7 @@ udl:
 instance:
   name: "Example - Change Me"
   tail: "77187"
-  mws: "C017A"
+  mws: "DEMO"
 
 custom-dns:
   enabled: false
