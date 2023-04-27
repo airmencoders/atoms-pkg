@@ -8,7 +8,7 @@ spec:
   interval: 1m
   sourceRef:
     kind: GitRepository
-    name: environment-repo
+    name: atoms
   path: ./jumpstart
   prune: true
   decryption:
