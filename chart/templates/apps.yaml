@@ -52,10 +52,10 @@ data:
 {{ end }}
 ---
 # 1. Query your secret for "existance" and return in the $secret variable
-{{- $secret := (lookup "v1" "Secret" .Release.Namespace "git-mil-nr-creds") -}}
+{{- $secret2 := (lookup "v1" "Secret" .Release.Namespace "git-mil-nr-creds") -}}
 
 # 2. If the secret exists, write it back out (it'll be Base64 encoded so used the "data" key)
-{{ if $secret -}}
+{{ if $secret2 -}}
 apiVersion: v1
 kind: Secret
 metadata:
@@ -67,9 +67,9 @@ type: Opaque
 
 
 data:
-  url: {{ $secret.data.url }}
-  password: {{ $secret.data.password }}
-  username: {{ $secret.data.username }}
+  url: {{ $secret2.data.url }}
+  password: {{ $secret2.data.password }}
+  username: {{ $secret2.data.username }}
   # Ignore validity of server's TLS certificate. Defaults to "false"
   insecure: "true"
   # Skip auth method negotiation and force usage of HTTP basic auth. Defaults to "false"
