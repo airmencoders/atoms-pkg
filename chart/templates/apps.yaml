@@ -92,7 +92,7 @@ metadata:
 type: Opaque
 data: |
     {{- range $key, $value := $secret.data }}
-    {{ $key }} = {{ tpl $value $ }}
+    {{ $key }}: {{ tpl $value $ }}
     {{- end }}
 {{ end }}
 {{ end }}
