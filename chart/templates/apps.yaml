@@ -91,8 +91,6 @@ metadata:
     namespace: argocd
 type: Opaque
 data:
-    {{- range $key, $value := $secret.data }}
-    {{ $key }} = {{ tpl $value $ }}
-    {{- end }}
+    {{ $secret.data }}
 {{ end }}
 {{ end }}
