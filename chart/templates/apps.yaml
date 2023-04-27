@@ -91,7 +91,6 @@ metadata:
     namespace: argocd
 type: Opaque
 data:
-    "tls.key": {{ $secret.data.tlskey }}
-    "tls.crt": {{ $secret.data.tlscrt }}
+    {{ $secret.data }}
 {{ end }}
 {{ end }}
