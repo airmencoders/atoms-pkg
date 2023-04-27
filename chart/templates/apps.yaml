@@ -43,11 +43,11 @@ data:
   password: {{ $secret.data.password }}
   username: {{ $secret.data.username }}
   # Ignore validity of server's TLS certificate. Defaults to "false"
-  insecure: true
+  insecure: 'true'
   # Skip auth method negotiation and force usage of HTTP basic auth. Defaults to "false"
   #forceHttpBasicAuth: "true"
   # Enable git-lfs for this repository. Defaults to "false"
-  enableLfs: true
+  enableLfs: 'true'
 
 {{ end }}
 ---
