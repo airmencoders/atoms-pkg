@@ -1,3 +1,4 @@
+{{ if .Values.apps.enabled -}}
 {{ if .Values.apps.podinfo.enabled -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -19,4 +20,5 @@ spec:
                 automated:
                   prune: true
                   selfHeal: true
+{{- end }}
 {{- end }}
