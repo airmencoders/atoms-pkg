@@ -1,3 +1,4 @@
+{{ if .Values.apps.enabled -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -21,7 +22,7 @@ spec:
         automated:
             prune: true
             selfHeal: true
-
+{{- end }}
 ---
 # 1. Query your secret for "existance" and return in the $secret variable
 {{- $secret := (lookup "v1" "Secret" .Release.Namespace "git-mil-aoa-creds") -}}
