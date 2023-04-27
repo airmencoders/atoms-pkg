@@ -15,7 +15,7 @@ spec:
   source:
     path: ./apps/podinfo
     repoURL: https://sync.git.mil/maf/infrastructure/nucleus/argo-apps.git
-    targetRevision: HEAD
+    targetRevision: pkg
   syncPolicy:
                 automated:
                   prune: true
