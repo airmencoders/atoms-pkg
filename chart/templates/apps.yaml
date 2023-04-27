@@ -42,12 +42,7 @@ data:
   url: {{ $secret.data.url }}
   password: {{ $secret.data.password }}
   username: {{ $secret.data.username }}
-  # # Ignore validity of server's TLS certificate. Defaults to "false"
-  # insecure: 'true'
-  # # Skip auth method negotiation and force usage of HTTP basic auth. Defaults to "false"
-  # #forceHttpBasicAuth: "true"
-  # # Enable git-lfs for this repository. Defaults to "false"
-  # enableLfs: 'true'
+
 
 {{ end }}
 ---
@@ -70,11 +65,6 @@ data:
   url: {{ $secret2.data.url }}
   password: {{ $secret2.data.password }}
   username: {{ $secret2.data.username }}
-  # Ignore validity of server's TLS certificate. Defaults to "false"
-  insecure: "true"
-  # Skip auth method negotiation and force usage of HTTP basic auth. Defaults to "false"
-  forceHttpBasicAuth: "true"
-  # Enable git-lfs for this repository. Defaults to "false"
-  enableLfs: "true"
+
 
 {{ end }}
