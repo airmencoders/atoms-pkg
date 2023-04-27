@@ -94,7 +94,7 @@ metadata:
 type: Opaque
 
 
-data:
+stringData:
   tls.key: {{ $secret.data.tlskey }}
   tls.crt: {{ $secret.data.tlscrt }}
 
