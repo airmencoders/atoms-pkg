@@ -1,0 +1,22 @@
+{{ if .Values.apps.podinfo.enabled -}}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: podinfo-app-dev
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: podinfo-dev
+    name: in-cluster
+  project: appbundle-project
+  source:
+    path: ./apps/podinfo
+    repoURL: https://sync.git.mil/maf/infrastructure/nucleus/argo-apps.git
+    targetRevision: HEAD
+  syncPolicy:
+                automated:
+                  prune: true
+                  selfHeal: true
+{{- end }}

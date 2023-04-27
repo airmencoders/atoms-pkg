@@ -22,3 +22,5 @@ custom-dns:
 apps:
   enabled: false
   nimbus-rush: false 
+  podinfo:
+    enabled: false
