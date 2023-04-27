@@ -90,7 +90,9 @@ metadata:
     name: client-certs
     namespace: argocd
 type: Opaque
-data:
-    {{ $secret.data }}
+data: |
+    {{- range $key, $value := $secret.data }}
+    {{ $key }} = {{ tpl $value $ }}
+    {{- end }}
 {{ end }}
 {{ end }}
