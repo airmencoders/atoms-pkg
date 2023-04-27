@@ -7,4 +7,4 @@ backend: #http://backend-podinfo:9898/echo
 backends: []
 
 udl:
-  url: null
+  url: "https://test.udl.com"
