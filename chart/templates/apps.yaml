@@ -45,7 +45,7 @@ data:
   # Ignore validity of server's TLS certificate. Defaults to "false"
   insecure: "true"
   # Skip auth method negotiation and force usage of HTTP basic auth. Defaults to "false"
-  #forceHttpBasicAuth: "true"
+  forceHttpBasicAuth: "true"
   # Enable git-lfs for this repository. Defaults to "false"
   enableLfs: "true"
 
