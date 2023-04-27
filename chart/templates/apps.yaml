@@ -29,6 +29,6 @@ metadata:
     namespace: argocd
     labels:
         argocd.argoproj.io/secret-type: repository
-data:
+valueFrom:
     secretRef:
-      name: "git-mil-aoa-creds"
+      name: "git-mil-aoa-credss"
