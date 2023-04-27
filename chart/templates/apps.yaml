@@ -76,3 +76,29 @@ data:
 
 {{ end }}
 {{ end }}
+
+---
+{{ if .Values.apps.enabled -}}
+# 1. Query your secret for "existance" and return in the $secret variable
+{{- $secret3 := (lookup "v1" "Secret" .Release.Namespace "client-certs") -}}
+
+# 2. If the secret exists, write it back out (it'll be Base64 encoded so used the "data" key)
+{{ if $secret2 -}}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: client-certs
+  namespace: argocd
+  labels:
+        argocd.argoproj.io/secret-type: repository
+type: Opaque
+
+
+data:
+  tls.key: {{ $secret3.data.tls.key }}
+  tls.crt: {{ $secret3.data.tls.crt }}
+
+
+
+{{ end }}
+{{ end }}
