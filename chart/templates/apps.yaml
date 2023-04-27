@@ -87,7 +87,7 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-    name: c2d2-client-certs
+    name: client-certs
     namespace: argocd
 type: Opaque
 stringData:
