@@ -1,5 +1,33 @@
 
 {{ if .Values.apps.enabled -}}
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: atoms-project
+  namespace: atoms
+  # Finalizer that ensures that project is not deleted until it is not referenced by any application
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  # Project description
+  description: The app bundle POC project
+
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - '*'
+
+  # Only permit applications to deploy to the guestbook namespace in the same cluster
+  destinations:
+  - namespace: '*'
+    server: '*'
+
+  # Deny all cluster-scoped resources from being created, except for Namespace
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+{{- end }}
+---
+{{ if .Values.apps.enabled -}}
 # 1. Query your secret for "existance" and return in the $secret variable
 {{- $secret := (lookup "v1" "Secret" .Release.Namespace "git-mil-aoa-creds") -}}
 
