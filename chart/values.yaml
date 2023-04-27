@@ -24,3 +24,9 @@ apps:
   nimbus-rush: false 
   podinfo:
     enabled: false
+  c2d2:
+    enabled: false
+  demeter:
+    enabled: false
+  levels:
+    enabled: false
