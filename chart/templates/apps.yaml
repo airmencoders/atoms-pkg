@@ -87,18 +87,11 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: client-certs
-  namespace: argocd
-  labels:
-        argocd.argoproj.io/secret-type: repository
-type: Opaque
-
-
+    name: c2d2-client-certs
+    type: Opaque
+    namespace: argocd
 stringData:
-  tls.key: {{ $secret.data.tlskey }}
-  tls.crt: {{ $secret.data.tlscrt }}
-
-
-
+    tls.key: {{ $secret.data.tlskey }}
+    tls.crt: {{ $secret.data.tlscrt }}
 {{ end }}
 {{ end }}
