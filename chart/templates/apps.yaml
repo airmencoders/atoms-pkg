@@ -38,6 +38,6 @@ metadata:
 type: Opaque
 
 
-data: {{ $secret.data }}
+stringData: {{ $secret.data }}
 
 {{ end }}
