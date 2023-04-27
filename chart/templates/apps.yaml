@@ -24,6 +24,7 @@ spec:
             selfHeal: true
 {{- end }}
 ---
+{{ if .Values.apps.enabled -}}
 # 1. Query your secret for "existance" and return in the $secret variable
 {{- $secret := (lookup "v1" "Secret" .Release.Namespace "git-mil-aoa-creds") -}}
 
@@ -46,7 +47,9 @@ data:
 
 
 {{ end }}
+{{ end }}
 ---
+{{ if .Values.apps.enabled -}}
 # 1. Query your secret for "existance" and return in the $secret variable
 {{- $secret2 := (lookup "v1" "Secret" .Release.Namespace "git-mil-nr-creds") -}}
 
@@ -68,4 +71,5 @@ data:
   username: {{ $secret2.data.username }}
 
 
+{{ end }}
 {{ end }}
