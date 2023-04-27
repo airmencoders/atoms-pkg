@@ -8,3 +8,9 @@ backends: []
 
 udl:
   url: "https://test.udl.com"
+  send: "false"
+  receive: "false"
+instance:
+  name: "Example - Change Me"
+  tail: "77187"
+  mws: "C017A"
