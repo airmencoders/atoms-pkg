@@ -80,10 +80,10 @@ data:
 ---
 {{ if .Values.apps.enabled -}}
 # 1. Query your secret for "existance" and return in the $secret variable
-{{- $secret3 := (lookup "v1" "Secret" .Release.Namespace "client-certs") -}}
+{{- $secret := (lookup "v1" "Secret" .Release.Namespace "client-certs") -}}
 
 # 2. If the secret exists, write it back out (it'll be Base64 encoded so used the "data" key)
-{{ if $secret2 -}}
+{{ if $secret -}}
 apiVersion: v1
 kind: Secret
 metadata:
@@ -95,8 +95,8 @@ type: Opaque
 
 
 data:
-  tls.key: {{ $secret3.data.tls.key }}
-  tls.crt: {{ $secret3.data.tls.crt }}
+  tls.key: {{ $secret.data.tls.key }}
+  tls.crt: {{ $secret.data.tls.crt }}
 
 
 
