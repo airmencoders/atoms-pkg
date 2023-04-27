@@ -21,3 +21,14 @@ spec:
         automated:
             prune: true
             selfHeal: true
+---
+apiVersion: v1
+kind: Secret
+metadata:
+    name: git-mil-aoa-creds
+    namespace: argocd
+    labels:
+        argocd.argoproj.io/secret-type: repository
+data:
+    secretRef:
+      name: "git-mil-aoa-creds"
