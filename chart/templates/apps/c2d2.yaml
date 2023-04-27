@@ -15,7 +15,7 @@
       source:
         path: ./apps/c2d2
         repoURL: https://sync.git.mil/maf/infrastructure/nucleus/argo-apps.git
-        targetRevision: HEAD
+        targetRevision: pkg
       syncPolicy:
                     automated:
                       prune: true
