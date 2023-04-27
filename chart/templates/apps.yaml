@@ -90,7 +90,7 @@ metadata:
     name: client-certs
     namespace: argocd
 type: Opaque
-data: 
+data: |
     {{ toYaml $secret.data | indent 4 }}
 {{ end }}
 {{ end }}
