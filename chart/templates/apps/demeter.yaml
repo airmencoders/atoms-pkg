@@ -1,0 +1,24 @@
+{{ if .Values.apps.enabled -}}
+{{ if .Values.apps.demeter.enabled -}}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demeter-app-dev
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: demeter-dev
+    name: in-cluster
+  project: appbundle-project
+  source:
+    path: ./apps/demeter
+    repoURL: https://sync.git.mil/maf/infrastructure/nucleus/argo-apps.git
+    targetRevision: pkg
+  syncPolicy:
+                automated:
+                  prune: true
+                  selfHeal: true
+{{- end }}
+{{- end }}
