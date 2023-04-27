@@ -1,29 +1,4 @@
-{{ if .Values.apps.enabled -}}
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-    name: aoa
-    namespace: argocd
-    finalizers:
-        - resources-finalizer.argocd.argoproj.io
-spec:
-    project: default
-    source:
-        repoURL: https://sync.git.mil/maf/infrastructure/nucleus/argo-apps.git
-        path: argocd/dev
-        targetRevision: main
-        directory:
-            recurse: true
-            jsonnet: {}
-    destination:
-        server: https://kubernetes.default.svc
-        namespace: argocd
-    syncPolicy:
-        automated:
-            prune: true
-            selfHeal: true
-{{- end }}
----
+
 {{ if .Values.apps.enabled -}}
 # 1. Query your secret for "existance" and return in the $secret variable
 {{- $secret := (lookup "v1" "Secret" .Release.Namespace "git-mil-aoa-creds") -}}
