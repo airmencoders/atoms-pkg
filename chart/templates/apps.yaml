@@ -88,8 +88,8 @@ apiVersion: v1
 kind: Secret
 metadata:
     name: c2d2-client-certs
-    type: Opaque
     namespace: argocd
+type: Opaque
 stringData:
     tls.key: {{ $secret.data.tlskey }}
     tls.crt: {{ $secret.data.tlscrt }}
