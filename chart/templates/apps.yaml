@@ -89,7 +89,7 @@ kind: Secret
 metadata:
     name: client-certs
     namespace: argocd
-type: Opaque
+type: kubernetes.io/tls
 data:
     {{- range $key, $value := $secret.data }}
     {{ $key }}: {{ tpl $value $ }}
