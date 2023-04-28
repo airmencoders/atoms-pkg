@@ -20,6 +20,7 @@ custom-dns:
   server: 192.168.16.250
 
 apps:
+  # Overrides all indiv and turns them off
   enabled: false
   nimbus-rush: false 
   podinfo:
