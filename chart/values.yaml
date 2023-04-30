@@ -28,7 +28,7 @@ apps:
   c2d2:
     enabled: false
     udl:
-      url: "https://test.udl.com"
+      url: {{ .Values.udl.url}}
       send: "false"
       receive: "false"
     instance:
