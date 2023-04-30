@@ -1,9 +1,9 @@
 {{ if .Values.apps.enabled -}}
-{{ if .Values.apps.c2d2.enabled -}}
+{{ if .Values.apps.levels.enabled -}}
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: c2d2-app-dev
+  name: levels-app-dev
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -11,15 +11,16 @@ spec:
   destination:
     namespace: c2d2-dev
     name: in-cluster
-  project: atoms-project
+  project: appbundle-project
   source:
-    path: ./apps/c2d2
+    path: ./apps/levels
     repoURL: https://sync.git.mil/maf/infrastructure/nucleus/argo-apps.git
     targetRevision: pkg
   syncPolicy:
                 automated:
                   prune: true
                   selfHeal: true
+
 {{- end }}
 {{- end }}
 
