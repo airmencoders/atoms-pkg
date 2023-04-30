@@ -27,14 +27,6 @@ apps:
     enabled: false
   c2d2:
     enabled: false
-    udl:
-      url: {{ .Values.packages.atoms.udl.url}}
-      send: "false"
-      receive: "false"
-    instance:
-      name: "Example - Change Me"
-      tail: "77187"
-      mws: "DEMO"
   demeter:
     enabled: false
   levels:
