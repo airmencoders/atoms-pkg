@@ -27,9 +27,7 @@ apps:
     enabled: false
   c2d2:
     enabled: false
-
   demeter:
     enabled: false
-
   levels:
     enabled: false
