@@ -27,6 +27,14 @@ apps:
     enabled: false
   c2d2:
     enabled: false
+    udl:
+      url: "https://test.udl.com"
+      send: "false"
+      receive: "false"
+    instance:
+      name: "Example - Change Me"
+      tail: "77187"
+      mws: "DEMO"
   demeter:
     enabled: false
   levels:
