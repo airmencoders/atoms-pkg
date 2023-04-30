@@ -27,7 +27,22 @@ apps:
     enabled: false
   c2d2:
     enabled: false
+    udl: 
+      url: {{ .Values.udl.url}}
+      send: {{ .Values.udl.send}}
+      receive: {{ .Values.udl.receive}}
+    instance:
+      name: {{ .Values.instance.name}}
+      tail: {{ .Values.instance.tail}}
+      mws: {{ .Values.instance.mws}}
   demeter:
     enabled: false
+    udl: 
+      url: {{ .Values.udl.url}}
+      send: {{ .Values.udl.send}}
   levels:
     enabled: false
+    udl: 
+      url: {{ .Values.udl.url}}
+      send: {{ .Values.udl.send}}
+      receive: {{ .Values.udl.receive}}

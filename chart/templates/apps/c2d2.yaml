@@ -22,3 +22,21 @@ spec:
                   selfHeal: true
 {{- end }}
 {{- end }}
+---
+{{ if .Values.apps.enabled -}}
+{{ if .Values.apps.c2d2.enabled -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: atoms-c2d2-env
+    namespace: argocd
+data:
+  UDL_URL: "{{ .Values.c2d2.udl.url }}"
+  UDL_SEND: "{{ .Values.c2d2.udl.send }}"
+  UDL_RECEIVE: "{{ .Values.udlc2d2..receive }}"
+  ATOMS_NAME: "{{ .Values.c2d2.instance.name }}"
+  TAIL_NUM: "{{ .Values.c2d2.instance.tail }}"
+  MWS: "{{ .Values.c2d2.instance.mws }}"
+
+{{- end }}
+{{- end }}
