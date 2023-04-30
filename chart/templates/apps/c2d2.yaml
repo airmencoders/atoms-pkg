@@ -31,12 +31,12 @@ metadata:
     name: atoms-c2d2-env
     namespace: argocd
 data:
-  UDL_URL: "{{ .Values.c2d2.udl.url }}"
-  UDL_SEND: "{{ .Values.c2d2.udl.send }}"
-  UDL_RECEIVE: "{{ .Values.udlc2d2..receive }}"
-  ATOMS_NAME: "{{ .Values.c2d2.instance.name }}"
-  TAIL_NUM: "{{ .Values.c2d2.instance.tail }}"
-  MWS: "{{ .Values.c2d2.instance.mws }}"
+  UDL_URL: "{{ .Values.apps.c2d2.udl.url }}"
+  UDL_SEND: "{{ .Values.apps.c2d2.udl.send }}"
+  UDL_RECEIVE: "{{ .Values.apps.c2d2.udl.receive }}"
+  ATOMS_NAME: "{{ .Values.apps.c2d2.instance.name }}"
+  TAIL_NUM: "{{ .Values.apps.c2d2.instance.tail }}"
+  MWS: "{{ .Values.apps.c2d2.instance.mws }}"
 
 {{- end }}
 {{- end }}
