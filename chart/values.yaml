@@ -28,7 +28,7 @@ apps:
   c2d2:
     enabled: false
     udl:
-      url: {{ .Values.packages.atoms.values.udl.url}}
+      url: {{ .Values.packages.atoms.udl.url}}
       send: "false"
       receive: "false"
     instance:
