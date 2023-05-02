@@ -11,11 +11,11 @@ spec:
   destination:
     namespace: argocd
     name: in-cluster
-  project: appbundle-project
+  project: atoms-project
   source:
     path: ./
     repoURL: https://sync.git.mil/maf/infrastructure/tinkering/add-ons/nimbus-rush.git
-    targetRevision: HEAD
+    targetRevision: pkg
   syncPolicy:
                 automated:
                   prune: true
