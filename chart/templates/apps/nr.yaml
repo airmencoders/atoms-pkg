@@ -1,0 +1,26 @@
+{{ if .Values.apps.enabled -}}
+{{ if .Values.apps.nimbus-rush.enabled -}}
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nr
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd
+    name: in-cluster
+  project: appbundle-project
+  source:
+    path: ./
+    repoURL: https://sync.git.mil/maf/infrastructure/tinkering/add-ons/nimbus-rush.git
+    targetRevision: HEAD
+  syncPolicy:
+                automated:
+                  prune: true
+                  selfHeal: true
+
+{{- end }}
+{{- end }}
+
