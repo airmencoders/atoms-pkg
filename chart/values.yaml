@@ -22,7 +22,8 @@ custom-dns:
 apps:
   # Overrides all indiv and turns them off
   enabled: false
-  nimbus-rush: false 
+  nimbus-rush: 
+    enabled: false
   podinfo:
     enabled: false
   c2d2:
