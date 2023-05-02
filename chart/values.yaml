@@ -22,7 +22,7 @@ custom-dns:
 apps:
   # Overrides all indiv and turns them off
   enabled: false
-  nimbus-rush: 
+  nimbusrush: 
     enabled: false
   podinfo:
     enabled: false
